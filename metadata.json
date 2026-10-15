@@ -1,0 +1,6 @@
+{
+  "name": "กลุ่มงานเภสัชกรรม โรงพยาบาลวชิระภูเก็ต",
+  "description": "ระบบสารสนเทศและการบริการ กลุ่มงานเภสัชกรรม โรงพยาบาลวชิระภูเก็ต (Vachira Phuket Hospital Pharmacy)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
