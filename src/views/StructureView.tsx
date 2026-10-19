@@ -12,137 +12,170 @@ import {
   ArrowUp,
 } from 'lucide-react';
 import { Language } from '../types/pharmacy';
+import { ExternalLink } from 'lucide-react';
 
 interface StructureUnit {
   id: string;
   name: string;
   head: string;
-  description: string;
   responsibilities: string[];
-  location: string;
+description?: {
+  text: string;
+  type?: 'bold' | 'heading';
+}[];
   extension: string;
+  driveUrl?: string;
+  imageUrl?: string;
+  
 }
 
+<div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+  <h2 className="text-xl font-bold text-slate-900">
+    โครงสร้างกลุ่มงานเภสัชกรรม
+  </h2>
+</div>
 export const STRUCTURE_UNITS: StructureUnit[] = [
-  {
-    id: 's-1',
-    name: 'งานบริการผู้ป่วยนอก',
-    head: 'ภญ. พรรณี จารุรัตน์ (หัวหน้างาน)',
-    description:
-      'ให้บริการคัดกรองใบสั่งยา ตรวจสอบความถูกต้อง จัดและส่งมอบยาผู้ป่วยนอก ด้วยระบบ Smart Queue และหุ่นยนต์จัดยาอัตโนมัติ',
-    responsibilities: [
-      'คัดกรองความปลอดภัยและความเหมาะสมของใบสั่งยาผู้ป่วยนอก',
-      'จัดและตรวจสอบยาด้วยเทคโนโลยีบาร์โค้ด 2 มิติ และหุ่นยนต์จัดยาความเร็วสูง',
-      'บริการส่งมอบยาพร้อมให้คำแนะนำการใช้ยาเบื้องต้น',
-      'โครงการเติมยา & Health Rider (ส่งยาถึงบ้าน โต๊ะ 41) โทร. 076-361234 ต่อ 1183',
-    ],
-    location: 'ห้องจ่ายยาผู้ป่วยนอก ชั้น 1 อาคารเฉลิมพระเกียรติฯ',
-    extension: '1183, 1184',
-  },
-  {
-    id: 's-2',
-    name: 'งานบริการผู้ป่วยใน',
-    head: 'ภก. ธีระพงษ์ สันติธรรม (หัวหน้างาน)',
-    description:
-      'ให้บริการจ่ายยาแบบเฉพาะบุคคลต่อมื้อ (Unit Dose Dispensing System) และห้องจ่ายยาอุบัติเหตุฉุกเฉิน (ER 24 ชั่วโมง)',
-    responsibilities: [
-      'ตรวจสอบคำสั่งการใช้ยาจากแพทย์ (Medication Order Review)',
-      'จัดยาแบบ Unit Dose บรรจุซองพร้อมระบุชื่อผู้ป่วย วันที่ และเวลาทาน',
-      'ควบคุมดูแลตู้ยาอัตโนมัติ (Automated Dispensing Cabinet: ADC) ประจำ ICU',
-      'ห้องจ่ายยาอุบัติเหตุและฉุกเฉิน (ER) เปิดบริการตลอด 24 ชั่วโมง ต่อ 1180',
-    ],
-    location: 'ชั้น 2 อาคาร 100 ปี สมเด็จย่า / ห้องจ่ายยา ER ชั้น 1',
-    extension: '1180 (ER 24 ชม.), 1240 (IPD)',
-  },
-  {
+{
+  id: 's-1',
+  name: 'โครงสร้างองค์กร',
+  head: 'หัวหน้ากลุ่มงานฯ (ภก.สมนึก ฮาเส็ม)',
+  responsibilities: [
+    '',
+  ],
+  extension: '1183, 1184',
+  imageUrl: 'https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/854780690_1135769688963489_1144044205535356898_n.jpg?stp=dst-jpg_tt6&cstp=mx1249x724&ctp=s1249x724&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uRkih_YqDE4Q7kNvwEMkswy&_nc_oc=AdoabS7N3XuZxIkeQLKW2_7EUI1iHu1bOSR9a_Jz2lnxt5ezrxiXiT-s_A3cbG2fhwE&_nc_zt=23&_nc_ht=scontent.furt1-1.fna&_nc_gid=nAzpkLFM0k2CkomTe5ehzg&_nc_ss=7a2a8&oh=00_AQNPgHn21Ifm2MHOS1XJpsc_5GGENhG0M6NLay9jKgd8gg&oe=6ADB8A0C',
+},
+  
+{
+  id: 's-2',
+  name: 'งานบริหารเวชภัณฑ์',
+  head: 'ภก.ไพรัช สุทธิพัฒนกิจ',
+
+responsibilities: [],
+
+description: [
+  { text: '1. จัดซื้อยา' },
+  { text: '2. E-Bidding' },
+  { text: '3. บริหารคลังยา' },
+  { text: '4. งานธุรการกลุ่มงานเภสัชกรรม' },
+
+  { text: 'เภสัชกร 7 คน' },
+  { text: 'จัดซื้อ', type: 'heading' },
+  { text: '-เภสัชกร 4 คน' },
+  { text: 'เจ้าพนักงานฯ 2 คน' },
+  { text: 'อื่นๆ 9 คน' },
+
+  { text: 'คลังยา', type: 'heading' },
+  { text: '-เภสัชกร 3 คน' },
+  { text: '-เจ้าพนักงานฯ 4 คน' },
+  { text: '-อื่นๆ 2 คน' },
+],
+  extension: '1480',
+  driveUrl: '',
+},
+
+   {
     id: 's-3',
-    name: 'งานการบริบาลทาง เภสัชกรรมผู้ป่วยนอก',
-    head: 'ภญ. สุพรรษา บำรุงจิตต์ (หัวหน้างาน)',
-    description:
-      'บริบาลเภสัชกรรมเฉพาะโรคแก่ผู้ป่วยนอก ติดตามผลการรักษาและป้องกันปัญหาจากการใช้ยา (Drug-Related Problems)',
-    responsibilities: [
-      'คลินิกบริบาลเภสัชกรรมผู้ป่วยนอก: คลินิกยาวาร์ฟาริน (Warfarin Clinic)',
-      'คลินิกโรคหอบหืดและปอดอุดกั้นเรื้อรัง (Asthma & COPD Clinic) สอนเทคนิคการใช้ยาพ่น',
-      'คลินิกโรคไตเรื้อรัง (CKD Clinic) และคลินิกเบาหวาน/ความดันโลหิตสูง',
-      'การประเมินและติดตามการเกิดอาการไม่พึงประสงค์จากยา (ADR Monitoring)',
-    ],
-    location: 'ห้องให้คำปรึกษาด้านยา ชั้น 1 อาคารเฉลิมพระเกียรติฯ',
-    extension: '1238',
-  },
-  {
-    id: 's-4',
-    name: 'งานการบริบาลทาง เภสัชกรรมผู้ป่วยใน',
-    head: 'ภก. ดร. วิศรุต เมธาวุฒิ (หัวหน้างาน)',
-    description:
-      'เภสัชกรคลินิกร่วมดูแลรักษาผู้ป่วยในหอผู้ป่วยวิกฤตและหอผู้ป่วยสามัญ (Ward Round) ร่วมกับทีมแพทย์',
-    responsibilities: [
-      'กระทบยอดประวัติยาเดิม (Medication Reconciliation) แรกรับและจำหน่าย',
-      'การปรับขนาดยาตามระดับยาในเลือด (Therapeutic Drug Monitoring: TDM) เช่น Vancomycin, Aminoglycosides',
-      'การประเมินการทำงานของตับและไตเพื่อปรับขนาดยาอย่างเหมาะสม',
-      'การดำเนินงานควบคุมการใช้ยาต้านจุลชีพอย่างสมเหตุผล (Antimicrobial Stewardship: ASP)',
-    ],
-    location: 'ชั้น 3 อาคารผู้ป่วยวิกฤต',
-    extension: '1355',
-  },
-  {
-    id: 's-5',
-    name: 'งานบริหารเวชภัณฑ์',
-    head: 'ภก. ชวลิต พุทธภูมิ (หัวหน้างาน)',
-    description:
-      'บริหารจัดการระบบจัดซื้อ คลังเวชภัณฑ์ และการกระจายยาอย่างมีประสิทธิภาพ ควบคุมอุณหภูมิและความชื้นมาตรฐานสากล',
-    responsibilities: [
-      'จัดซื้อและควบคุมคลังยาและเวชภัณฑ์มิใช่ยา',
-      'ควบคุมคลังยาห้องเย็น (Cold Chain 2-8°C) ด้วยระบบเซนเซอร์ IoT แจ้งเตือน 24 ชั่วโมง',
-      'บริหารจัดการยาสำรองฉุกเฉินและยาขาดคราว (Drug Shortage Management)',
-      'ป้องกันความเสื่อมสภาพและการหมดอายุของยาในคลังเวชภัณฑ์',
-    ],
-    location: 'ชั้น B อาคารคลังเวชภัณฑ์กลาง',
-    extension: '1090',
-  },
-  {
-    id: 's-6',
-    name: 'งานผลิตและเคมีบำบัด',
-    head: 'ภญ. ภัทรพร ศิริวัฒนา (หัวหน้างาน)',
-    description:
-      'เตรียมและผสมยาปราศจากเชื้อ ยาเคมีบำบัด และสารอาหารทางหลอดเลือดดำ (TPN) ในห้องสะอาดระดับ Class 100',
-    responsibilities: [
-      'ผสมยาเคมีบำบัดในตู้ชีวนิรภัย Biological Safety Cabinet Class II Type B2',
-      'เตรียมสารอาหารทางหลอดเลือดดำ (Total Parenteral Nutrition: TPN) สำหรับทารกแรกเกิดและผู้ใหญ่',
-      'เตรียมยาหยอดตาปราศจากเชื้อเฉพาะราย (Extemporaneous Eye Drops)',
-      'การควบคุมความสะอาดและการตรวจเฝ้าระวังเชื้อจุลชีพในห้องสะอาด (Cleanroom)',
-    ],
-    location: 'ชั้น 4 อาคารมะเร็งวิทยารังสีรักษา',
+    name: 'งานบริการจ่ายยาผู้ป่วยใน/บริบาลเภสัชกรรมผู้ป่วยใน',
+    head: 'ภญ.จิราภรณ์ สุทธิพัฒนกิจ',
+    responsibilities: [],
+
+    description: [
+  { text: '1. บริการจ่ายยาผู้ป่วยในและ OPD คุณพุ่ม' },
+  { text: '2. บริบาลเภสัชกรรมผู้ป่วยใน 35 หอผู้ป่วย' },
+  { text: '3. คัดกรองความเหมะสมของคำสั่งใช้ยาผู้ป่วยใน' },
+  { text: '4. ติดตาม ADR/ADE/MR' },
+
+  { text: 'เภสัชกร 13 คน', type: 'bold' },
+  { text: 'IPD', type: 'heading' },
+  { text: '-เภสัชกร 11 คน' },
+  { text: 'อื่นๆ 14 คน' },
+  { text: 'คุณพุ่ม', type: 'heading' },
+  { text: '-เภสัชกร 2 คน' },
+  { text: '-เจ้าพนักงานฯ 2 คน' },
+  { text: '-อื่นๆ 2 คน' },
+],
     extension: '1480',
+     driveUrl:
+    '',
   },
-  {
+
+   {
+    id: 's-4',
+    name: 'งานผลิตยา',
+    head: 'ภก.ชาติชาย  หวังแต่ธรรม',
+    responsibilities: [],
+        description: [
+  { text: '1. เตรียมยา TPN' },
+  { text: '2. เตรียมยาเคมีบำบัด' },
+  { text: '3. เตรียมยาเฉพาะราย' },
+  { text: '4. เตรียมยา small dose' },
+  { text: '5. บริบาลเภสัชกรรมผู้ป่วย Solid tumor และคลินิกกัญชาทางการแพทย์' },
+
+  { text: 'เภสัชกร 5 คน', type: 'bold' },
+  { text: '-เจ้าพนักงานฯ 5 คน' },
+  { text: '-อื่นๆ 4 คน' },
+],
+    extension: '1480',
+     driveUrl:
+    '',
+  },
+
+   {
+    id: 's-5',
+    name: 'งานบริการจ่ายยาผู้ป่วยนอก/บริบาลเภสัชกรรมผู้ป่วยนอก',
+    head: 'ภญ.วรภา วราธนกุล',
+    responsibilities: [],
+        description: [
+  { text: '1. บริการจ่ายยาผู้ป่วยนอก' },
+  { text: '2. คัดกรองความเหมะสมของคำสั่งใช้ยาผู้ป่วยนอก' },
+  { text: '3. บริบาลเภสัชกรรมผู้ป่วยโรคเรื้อรัง เช่น คลินิกวาร์-ฟาริน คลินิกหัวใจล้มเหลว เบาหวาน หอบหืด ไต วัณโรค เอดส์ เป็นต้น (ทั้งหมด 11 คลินิก)' },
+
+  { text: 'เภสัชกร 18 คน', type: 'bold' },
+  { text: '-เจ้าพนักงานฯ 15 คน' },
+  { text: '-อื่นๆ 26 คน' },
+],
+    extension: '1480',
+     driveUrl:
+    '',
+  },
+
+   {
+    id: 's-6',
+    name: 'งานเภสัชกรรมคลินิกและพัฒนาระบบยา',
+    head: 'ภญ.วิลาสินีย์ สกุลแพทย์',
+    responsibilities: [],
+        description: [
+  { text: '1. บริบาลเภสัชกรรมผู้ป่วยใน 2 หอผู้ป่วย' },
+  { text: '2. ระบบยา' },
+  { text: '3. ประเมินการใช้ยา DUE' },
+  { text: '4. ออกแบบระบบและติดตามการใช้ยาความเสี่ยงสูง' },
+  { text: '5. ติดตามการดำเนินงาน MedicationReconciliation' },
+
+  { text: 'เภสัชกร 6 คน', type: 'bold' },
+  { text: '-เจ้าพนักงานฯ 1 คน' },
+],
+    extension: '1480',
+     driveUrl:
+    '',
+  },
+
+     {
     id: 's-7',
-    name: 'งานเภสัชกรรมปฐมภูมิ',
-    head: 'ภก. ธนกฤต ศรีสุข (หัวหน้างาน)',
-    description:
-      'สนับสนุนระบบยาและบริการเภสัชกรรมในโรงพยาบาลส่งเสริมสุขภาพตำบล (รพ.สต.) เครือข่ายสุขภาพ และงานเยี่ยมบ้าน',
-    responsibilities: [
-      'ควบคุมมาตรฐานระบบยาใน รพ.สต. และศูนย์บริการสาธารณสุขในเครือข่าย',
-      'ร่วมทีมสหวิชาชีพเยี่ยมบ้านผู้ป่วยติดเตียงและผู้ป่วยโรคเรื้อรัง (Home Health Care)',
-      'ส่งเสริมการใช้ยาอย่างสมเหตุผลในชุมชน (RDU Community)',
-      'ระบบการกระจายยาและการสนับสนุนยาจำเป็นสู่หน่วยบริการปฐมภูมิ',
-    ],
-    location: 'ชั้น 2 อาคารเวชกรรมสังคม',
-    extension: '1155',
-  },
-  {
-    id: 's-8',
-    name: 'งานบริการเภสัชสนเทศ',
-    head: 'ภญ. รสสุคนธ์ เอกธนสาร (หัวหน้างาน)',
-    description:
-      'ศูนย์ข้อมูลยา (Drug Information Service: DIS) ให้บริการข้อมูลยาเชิงลึกแก่บุคลากรทางการแพทย์และประชาชน',
-    responsibilities: [
-      'ตอบข้อซักถามข้อมูลยา (ขนาดยา, อาการไม่พึงประสงค์, อันตรกิริยาระหว่างยา, การใช้ยาในหญิงตั้งครรภ์)',
-      'งานคุ้มครองผู้บริโภคด้านยาและผลิตภัณฑ์สุขภาพ',
-      'จัดทำคู่มือ บัญชียาโรงพยาบาล และวารสารเภสัชกรรมโรงพยาบาล',
-      'เลขานุการคณะกรรมการเภสัชกรรมและการบำบัด (PTC)',
-    ],
-    location: 'ชั้น 2 อาคารอำนวยการ',
-    extension: '1212',
+    name: 'งานเภสัชสนเทศและข้อมูลยา',
+    head: 'ภก.อภิชาติ จิตต์ซื่อ',
+    responsibilities: [],
+        description: [
+  { text: '1. บริการสารสนเทศและข้อมูลยา' },
+  { text: '2. จัดทำ monograph' },
+  { text: '3. จัดทำหนังสือจดหมายข่าว' },
+  { text: '4. เป็นวิทยากรให้ความรู้ด้านยา' },
+  { text: '5. รับฝึกงาน นศภ.' },
+  { text: 'เภสัชกร 1 คน', type: 'bold' },
+],
+    extension: '1480',
+     driveUrl:
+    '',
   },
 ];
 
@@ -160,7 +193,7 @@ export const StructureView: React.FC<{
     return STRUCTURE_UNITS[0];
   });
 
-  const [viewMode, setViewMode] = useState<'continuous' | 'focus'>('continuous');
+  const [viewMode, setViewMode] = useState<'continuous' | 'focus'>('focus');
   const unitRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
@@ -189,7 +222,6 @@ export const StructureView: React.FC<{
       }
     }
   };
-
   return (
     <div className="space-y-6 font-['Sarabun',sans-serif]">
       {/* Header */}
@@ -204,60 +236,22 @@ export const StructureView: React.FC<{
               โครงสร้างกลุ่มงานเภสัชกรรม
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              การบริหารงานและการแบ่งส่วนงาน 8 งานหลัก เพื่อความเป็นเลิศด้านเภสัชกรรมบริการและความปลอดภัย 3P Safety
+              โครงสร้างองค์กร กลุ่มงานเภสัชกรรม โรงพยาบาลวชิระภูเก็ต
+
             </p>
           </div>
-
-          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl self-start sm:self-auto border border-slate-200 shrink-0">
-            <button
-              type="button"
-              onClick={() => setViewMode('continuous')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                viewMode === 'continuous'
-                  ? 'bg-emerald-700 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <LayoutList className="w-3.5 h-3.5" />
-              <span>แสดงข้อมูลต่อเนื่อง</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setViewMode('focus')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                viewMode === 'focus'
-                  ? 'bg-emerald-700 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <Columns className="w-3.5 h-3.5" />
-              <span>เลือกดูทีละงาน</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Quick Jump Buttons */}
-        <div className="mt-5 flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
-          {STRUCTURE_UNITS.map((unit, idx) => {
-            const isCurrent = selectedUnit.id === unit.id;
-            return (
-              <button
-                key={unit.id}
-                type="button"
-                onClick={() => scrollToUnit(unit)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
-                  isCurrent
-                    ? 'bg-emerald-700 text-white shadow-xs font-bold'
-                    : 'bg-slate-50 text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200'
-                }`}
-              >
-                {idx + 1}. {unit.name}
-              </button>
-            );
-          })}
-        </div>
+        </div>       
       </div>
-
+{/* รูปแผนผังโครงสร้างองค์กร */}
+<div className="my-8 flex justify-center px-2 sm:px-4">
+  <div className="w-full max-w-4xl overflow-hidden rounded-xl">
+    <img
+      src="https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/855166376_1135853215621803_6758425189385968408_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x1414&ctp=s2000x1414&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fBMk6WFXi_YQ7kNvwFg_pJT&_nc_oc=AdpYN_wz2HR_-MoIGjg98bid9CictUr7Mqd_uFaaN9kJmWR-YC5BrGKBIGsugSlf7bU&_nc_zt=23&_nc_ht=scontent.furt1-1.fna&_nc_gid=2IolsI6iw-lpwEa4wtCyQw&_nc_ss=7a2a8&oh=00_AQPp8yVh5AKbnX657MNbQvWwiLF4cMg7-OP2qYbA99DKNw&oe=6ADB92BD"
+      alt="โครงสร้างองค์กร กลุ่มงานเภสัชกรรม โรงพยาบาลวชิระภูเก็ต"
+      className="mx-auto h-auto w-full object-contain"
+    />
+  </div>
+</div>
       {viewMode === 'continuous' ? (
         /* Continuous View: All 8 units stacked */
         <div className="space-y-6">
@@ -291,25 +285,8 @@ export const StructureView: React.FC<{
                       </p>
                     </div>
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedUnit(unit);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="self-start sm:self-auto text-xs text-slate-400 hover:text-emerald-700 flex items-center gap-1 font-medium"
-                  >
-                    <ArrowUp className="w-3.5 h-3.5" />
-                    <span>กลับขึ้นบน</span>
-                  </button>
                 </div>
-
                 <div className="space-y-4 text-xs sm:text-sm">
-                  <p className="text-slate-700 leading-relaxed">
-                    {unit.description}
-                  </p>
-
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
                     <span className="text-xs font-bold text-slate-800 block">
                       ภารกิจและความรับผิดชอบหลัก:
@@ -320,25 +297,7 @@ export const StructureView: React.FC<{
                         <span>{resp}</span>
                       </div>
                     ))}
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
-                    <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <MapPin className="w-4 h-4 text-emerald-700 shrink-0" />
-                      <div>
-                        <span className="text-slate-400 block text-[10px]">สถานที่ตั้ง</span>
-                        <span className="font-semibold text-slate-800">{unit.location}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                      <Phone className="w-4 h-4 text-teal-700 shrink-0" />
-                      <div>
-                        <span className="text-slate-400 block text-[10px]">โทรศัพท์ภายใน</span>
-                        <span className="font-semibold text-slate-800">076-361234 ต่อ {unit.extension}</span>
-                      </div>
-                    </div>
-                  </div>
+                  </div>                
                 </div>
               </div>
             );
@@ -394,13 +353,9 @@ export const StructureView: React.FC<{
               );
             })}
           </div>
-
           <div className="lg:col-span-7">
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-                  หน่วยงานบริการภายในกลุ่มงาน
-                </span>
                 <h2 className="text-xl font-bold text-slate-900 mt-2">
                   {selectedUnit.name}
                 </h2>
@@ -408,43 +363,68 @@ export const StructureView: React.FC<{
                   หัวหน้างาน: <strong className="text-slate-800">{selectedUnit.head}</strong>
                 </p>
               </div>
-
               <div>
-                <h4 className="text-xs font-bold text-slate-900 mb-2">บทบาทและหน้าที่ความรับผิดชอบ:</h4>
-                <p className="text-xs text-slate-700 mb-3 leading-relaxed">
-                  {selectedUnit.description}
-                </p>
-
                 <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
-                  <span className="text-xs font-bold text-slate-800 block mb-1">
-                    ภารกิจหลัก (Key Functions):
-                  </span>
+
+                  {selectedUnit.driveUrl && (
+              <div className="mt-4">
+                <a
+                   href={selectedUnit.driveUrl}
+                    target="_blank"
+                  rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700">
+                     <ExternalLink size={16} />
+                     เปิดเอกสาร Google Slides
+                </a>
+             </div>
+                )}
                   {selectedUnit.responsibilities.map((resp, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{resp}</span>
                     </div>
                   ))}
+
+{selectedUnit.description && (
+  <div className="mt-4 rounded-xl bg-emerald-50 border border-emerald-200 p-4 space-y-2">
+    {selectedUnit.description.map((item, index) => (
+      <p
+        key={index}
+        className={
+          item.type === 'heading'
+            ? 'text-sm font-bold text-slate-800 underline underline-offset-4 mt-3'
+            : item.type === 'bold'
+              ? 'text-sm font-bold text-slate-800'
+              : 'text-sm text-slate-700'
+        }
+      >
+        {item.text}
+      </p>
+    ))}
+  </div>
+)}
+
+                                {/* รูปภาพของหน่วยงาน */}
+              {selectedUnit.imageUrl ? (
+                <div className="mt-4 rounded-xl border border-slate-200 p-2">
+                  <img
+                    src={selectedUnit.imageUrl}
+                    alt={selectedUnit.name}
+                    className="block w-full h-auto max-h-[400px] object-contain rounded-lg"
+                    onError={(e) => {
+                      console.error('โหลดรูปภาพไม่สำเร็จ:', selectedUnit.imageUrl);
+                      e.currentTarget.alt = 'ไม่สามารถโหลดรูปภาพได้';
+                    }}
+                  />
+                </div>
+              ) : (
+                <p className="mt-4 text-sm text-slate-500">
+                  ยังไม่มีรูปภาพของหน่วยงานนี้
+                </p>
+              )}
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-100 text-xs">
-                <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl">
-                  <MapPin className="w-4 h-4 text-emerald-700 shrink-0" />
-                  <div>
-                    <span className="text-slate-400 block text-[10px]">สถานที่ตั้ง</span>
-                    <span className="font-semibold text-slate-800">{selectedUnit.location}</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl">
-                  <Phone className="w-4 h-4 text-teal-700 shrink-0" />
-                  <div>
-                    <span className="text-slate-400 block text-[10px]">โทรศัพท์ภายใน</span>
-                    <span className="font-semibold text-slate-800">076-361234 ต่อ {selectedUnit.extension}</span>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
