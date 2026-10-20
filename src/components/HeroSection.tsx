@@ -9,7 +9,7 @@ interface HeroSectionProps {
 }
 
 export const DEFAULT_HERO_BG_URL =
-  'https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/591038272_1193146056250642_1137167141342763709_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1260x709&ctp=s1260x709&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gaHHymdPiKUQ7kNvwHnYGv-&_nc_oc=AdoLbnOiQCjiD0gfgSQ1LYSa3o3EHqlH9ACXogTiigAzza8u8ayY8TCSOhd_GzngTZc&_nc_zt=23&_nc_ht=scontent.furt1-1.fna&_nc_gid=0z6mRLOGoJpO25yknG_tmw&_nc_ss=7a2a8&oh=00_AQPQK9D3fRVkEaq6ojkOAFJn9WhZ02k1XP1k1VZjNwHb8w&oe=6AD614BF';
+  'https://scontent.fbkk12-2.fna.fbcdn.net/v/t39.30808-6/591038272_1193146056250642_1137167141342763709_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1260x709&ctp=s1260x709&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Y29tkM4kkBsQ7kNvwFPkfIS&_nc_oc=AdrvsgZ6cNXX8tlReHtY8x_uhfL8WMZ9Mag3fOWSxlPIGD5plPpcYMI8LjDMvfn7OnDfoL8tEcmIFlM1MEHPsGgy&_nc_zt=23&_nc_ht=scontent.fbkk12-2.fna&_nc_gid=Q139zMVOqPX4_VL0bOgWPg&_nc_ss=7b2a8&oh=00_AQMFp-gTBRqpnU0kO6TH2S1fzRgcpr-QpQbzc4V1XDP5Mw&oe=6ADD1CBF';
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onNavigate,
