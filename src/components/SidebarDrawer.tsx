@@ -211,13 +211,6 @@ export const SidebarDrawer: React.FC<SidebarDrawerProps> = ({
       icon: <GraduationCap className="w-5 h-5" />,
       iconColorClass: 'text-purple-600',
     },
-    {
-      id: 'activities',
-      labelTh: 'กิจกรรม',
-      labelEn: 'Activities & Events',
-      icon: <Calendar className="w-5 h-5" />,
-      iconColorClass: 'text-rose-600',
-    },
   ];
 
   if (!isOpen) return null;
