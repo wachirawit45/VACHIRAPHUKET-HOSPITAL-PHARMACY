@@ -39,7 +39,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
         onOpenConsultation={onOpenConsultation}
         lang={lang}
       />
-
       {/* 2. Smart Hospital Pharmacy Highlights (Feature Cards) */}
       <section className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200/80 pb-4">
@@ -53,9 +52,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 : 'Digital Pharmacy Services, Vachira Phuket Hospital'}
             </h2>
           </div>
-
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: หุ่นยนต์จัดยาและ Smart Dispensing */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
@@ -92,7 +89,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </button>
             </div>
           </div>
-
           {/* Card 2: บริบาลเภสัชกรรมและการปรึกษา */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
             <div className="h-44 overflow-hidden relative">
@@ -128,7 +124,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </button>
             </div>
           </div>
-
           {/* Card 3: ระบบประเมิน DUE และงานวิจัย R2R */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
             <div className="h-44 overflow-hidden relative">
@@ -165,16 +160,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           </div>
         </div>
-      </section>
-
-      
+      </section>     
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               {lang === 'th' ? 'ข่าวสารและประกาศความปลอดภัยด้านยา' : 'News & Safety Bulletins'}
             </h2>
-
           </div>
           <button
             type="button"
@@ -185,7 +177,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {latestNews.map((item) => (
             <div
@@ -222,9 +213,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           ))}
         </div>
       </section>
-
       {/* 5. Contact & Service Units Banner */}
-      
     </div>
   );
 };
