@@ -53,27 +53,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right Zone: Home Nav, Drug Search button, Language Switcher */}
         <div className="flex items-center gap-3 sm:gap-4">
-          {/* Home Link */}
-          <button
-            type="button"
-            onClick={() => onNavigate('home')}
-            className={`hidden md:inline-flex text-sm font-medium transition-colors hover:text-emerald-700 ${
-              currentPage === 'home' ? 'text-emerald-800 font-semibold' : 'text-slate-600'
-            }`}
-          >
-            {lang === 'th' ? 'หน้าแรก' : 'Home'}
-          </button>
-
-          {/* Search Button */}
-          <button
-            type="button"
-            onClick={onOpenSearch}
-            className="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-full hover:border-emerald-600 hover:text-emerald-700 hover:shadow-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
-          >
-            <Search className="w-4 h-4 text-slate-500" />
-            <span>{lang === 'th' ? 'ค้นหายา' : 'Search Drugs'}</span>
-          </button>
-
+    
           {/* Language Switcher Pill */}
           <button
             type="button"
