@@ -1,44 +1,85 @@
+
 import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Download, Award, FileCheck } from 'lucide-react';
+import {
+  GraduationCap,
+  Download,
+  Search,
+  X,
+} from 'lucide-react';
+
 import { ACADEMIC_LIST } from '../data/pharmacyData';
 import { Language } from '../types/pharmacy';
 
 export const AcademicView: React.FC<{ lang: Language }> = ({ lang }) => {
+  // ตัวกรองประเภทผลงาน
   const [filterType, setFilterType] = useState<string>('All');
 
+  // คำค้นหา
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // กรองข้อมูลตามประเภทและคำค้นหา
   const filteredItems = ACADEMIC_LIST.filter((item) => {
-    if (filterType === 'All') return true;
-    return item.type === filterType;
+    const matchesType =
+      filterType === 'All' || item.type === filterType;
+
+    const keyword = searchTerm.trim().toLowerCase();
+
+    const matchesSearch = [
+      item.title,
+      item.authors,
+      item.year,
+      item.type,
+      item.abstract,
+    ]
+      .join(' ')
+      .toLowerCase()
+      .includes(keyword);
+
+    return matchesType && matchesSearch;
   });
+
+  const filterTypes = [
+    'All',
+    'R2R',
+    'CQI',
+    'Innovation',
+    'Publication',
+  ];
 
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col gap-5">
+          {/* หัวข้อ */}
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-800 text-xs font-bold mb-2 border border-purple-200">
               <GraduationCap className="w-4 h-4 text-purple-600" />
-              <span>ACADEMIC WORKS & RESEARCH</span>
+              <span>ACADEMIC WORKS &amp; RESEARCH</span>
             </div>
+
             <h1 className="text-2xl font-bold text-slate-900">
-              {lang === 'th' ? 'ผลงานวิชาการและงานวิจัย R2R' : 'Academic Works & Research'}
+              {lang === 'th'
+                ? 'ผลงานวิชาการและงานวิจัย'
+                : 'Academic Works & Research'}
             </h1>
+
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              ผลงานการพัฒนางานประจำสู่งานวิจัย (Routine to Research) นวัตกรรมบริการ และบทความวิจัยที่ได้รับการตีพิมพ์
+              ผลงานการพัฒนางานประจำสู่งานวิจัย
             </p>
           </div>
 
-          <div className="flex gap-1.5 text-xs font-medium">
-            {['All', 'R2R', 'Innovation', 'Publication'].map((type) => (
+          {/* ปุ่มกรองประเภทผลงาน */}
+          <div className="flex flex-wrap gap-2 text-xs font-medium">
+            {filterTypes.map((type) => (
               <button
                 key={type}
                 type="button"
                 onClick={() => setFilterType(type)}
-                className={`px-3 py-1.5 rounded-xl transition-all ${
+                className={`px-4 py-2 rounded-xl transition-all ${
                   filterType === type
-                    ? 'bg-purple-800 text-white font-bold shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    ? 'bg-purple-800 text-white font-bold shadow-sm'
+                    : 'bg-slate-100 text-slate-600 hover:bg-purple-50 hover:text-purple-800'
                 }`}
               >
                 {type === 'All' ? 'ทั้งหมด' : type}
@@ -48,45 +89,150 @@ export const AcademicView: React.FC<{ lang: Language }> = ({ lang }) => {
         </div>
       </div>
 
+      {/* Search Box */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-sm">
+        <label
+          htmlFor="academic-search"
+          className="block text-sm font-bold text-slate-700 mb-3"
+        >
+          ค้นหาผลงานวิชาการ
+        </label>
+
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+
+          <input
+            id="academic-search"
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="ชื่อผลงาน ผู้วิจัย ปี พ.ศ. หรือประเภท..."
+            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-12 pr-12 text-sm text-slate-800 outline-none transition focus:border-purple-500 focus:bg-white focus:ring-2 focus:ring-purple-100"
+          />
+
+          {searchTerm !== '' && (
+            <button
+              type="button"
+              onClick={() => setSearchTerm('')}
+              aria-label="ล้างคำค้นหา"
+              title="ล้างคำค้นหา"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+
+        {/* จำนวนผลการค้นหา */}
+        <div className="flex flex-wrap items-center justify-between gap-2 mt-3">
+          <p className="text-xs text-slate-500">
+            พบ {filteredItems.length} รายการ
+            {searchTerm.trim() !== '' &&
+              ` จากคำค้นหา "${searchTerm.trim()}"`}
+          </p>
+
+          {(searchTerm !== '' || filterType !== 'All') && (
+            <button
+              type="button"
+              onClick={() => {
+                setSearchTerm('');
+                setFilterType('All');
+              }}
+              className="text-xs font-bold text-purple-700 hover:text-purple-900"
+            >
+              ล้างตัวกรองทั้งหมด
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* Academic List */}
       <div className="space-y-4">
-        {filteredItems.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4 hover:border-purple-300 transition-all"
-          >
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-              <div>
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
-                    {item.type}
-                  </span>
-                  <span className="text-xs text-slate-400">ปีที่เผยแพร่: พ.ศ. {item.year}</span>
+        {filteredItems.length > 0 ? (
+          filteredItems.map((item, index) => (
+            <div
+              key={`${item.id}-${item.type}-${index}`}
+              className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm space-y-4 hover:border-purple-300 transition-all"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                {/* รายละเอียดผลงาน */}
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
+                      {item.type}
+                    </span>
+
+                    <span className="text-xs text-slate-400">
+                      ปีที่เผยแพร่: พ.ศ. {item.year}
+                    </span>
+                  </div>
+
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 break-words">
+                    {item.title}
+                  </h2>
+
+                  <p className="text-xs sm:text-sm text-slate-500 mt-2 font-medium">
+                    ผู้วิจัย: {item.authors || '-'}
+                  </p>
+
+                  {item.abstract && (
+                    <p className="text-sm text-slate-600 mt-3 leading-relaxed whitespace-pre-line">
+                      {item.abstract}
+                    </p>
+                  )}
                 </div>
-                <h2 className="text-base sm:text-lg font-bold text-slate-900">
-                  {item.title}
-                </h2>
-                <p className="text-xs text-slate-500 mt-1 font-medium">
-                  ผู้วิจัย: {item.authors} (โรงพยาบาลวชิระภูเก็ต)
-                </p>
+
+                {/* ปุ่มเปิดเอกสาร */}
+                <div className="shrink-0">
+                  {item.downloadUrl ? (
+                    <a
+                      href={item.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 bg-purple-50 hover:bg-purple-100 text-purple-800 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>เปิดเอกสาร</span>
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="px-4 py-2.5 bg-slate-100 text-slate-400 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-not-allowed"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>ไม่มีเอกสาร</span>
+                    </button>
+                  )}
+                </div>
               </div>
-
-              <button
-                type="button"
-                onClick={() => alert(`ดาวน์โหลดบทคัดย่อวิจัย "${item.title}" เรียบร้อยแล้ว`)}
-                className="px-3.5 py-2 bg-purple-50 hover:bg-purple-100 text-purple-800 rounded-xl text-xs font-bold transition-colors shrink-0 flex items-center gap-1.5 self-start"
-              >
-                <Download className="w-4 h-4" />
-                <span>ดาวน์โหลด Abstract (PDF)</span>
-              </button>
             </div>
+          ))
+        ) : (
+          /* ไม่พบข้อมูล */
+          <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-12 text-center">
+            <Search className="mx-auto mb-3 h-10 w-10 text-slate-300" />
 
-            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-900 block mb-1">บทคัดย่อ (Abstract):</span>
-              {item.abstract}
-            </div>
+            <p className="font-bold text-slate-700">
+              ไม่พบผลงานที่ค้นหา
+            </p>
+
+            <p className="mt-2 text-sm text-slate-500">
+              ลองเปลี่ยนคำค้นหาหรือเลือกประเภทผลงานอื่น
+            </p>
+
+            <button
+              type="button"
+              onClick={() => {
+                setSearchTerm('');
+                setFilterType('All');
+              }}
+              className="mt-4 rounded-xl bg-purple-800 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-purple-900"
+            >
+              แสดงผลงานทั้งหมด
+            </button>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
