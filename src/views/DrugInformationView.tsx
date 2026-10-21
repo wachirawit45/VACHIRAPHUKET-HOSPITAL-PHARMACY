@@ -273,27 +273,27 @@ export const DrugInformationView: React.FC<{
       id: 'huahin-form',
       category: 'บัญชียาและรหัสยา',
       categoryOrder: 1,
-      title: 'บัญชียาโรงพยาบาลหัวหิน',
-      subtitle: 'รายการยาและแนวทางการใช้ยาเครือข่ายโรงพยาบาลหัวหิน',
+      title: 'บัญชียาโรงพยาบาลวชิระภูเก็ต',
+      subtitle: 'รายการยาและแนวทางการใช้ยาเครือข่ายโรงพยาบาลวชิระภูเก็ต',
       badge: 'Formulary',
       content: (
         <div className="space-y-4 text-xs sm:text-sm text-slate-700">
           <p className="leading-relaxed">
-            รายการยาในบัญชียาโรงพยาบาลหัวหิน สำหรับบุคลากรทางการแพทย์ใช้เทียบเคียงรายการยาข้ามเครือข่ายและระบบส่งต่อผู้ป่วยเขตสุขภาพ
+            รายการยาในบัญชียาโรงพยาบาลวชิระภูเก็ต สำหรับบุคลากรทางการแพทย์ใช้เทียบเคียงรายการยาข้ามเครือข่ายและระบบส่งต่อผู้ป่วยเขตสุขภาพ
           </p>
           <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-200 space-y-2">
-            <span className="font-bold text-emerald-950 block">เอกสารบัญชียาโรงพยาบาลหัวหิน ฉบับปรับปรุง:</span>
+            <span className="font-bold text-emerald-950 block">เอกสารบัญชียาโรงพยาบาลวชิระภูเก็ต ฉบับปรับปรุง:</span>
             <p className="text-emerald-900 text-xs">
               ประกอบด้วยรายการยาผู้ป่วยนอก (OPD), ผู้ป่วยใน (IPD), ยาช่วยชีวิตฉุกเฉิน, ยาเคมีบำบัด และรายการยา High Alert Drug
             </p>
             <div className="pt-2 flex flex-wrap gap-2">
               <button
                 type="button"
-                onClick={() => alert('ดาวน์โหลดคู่มือบัญชียาโรงพยาบาลหัวหิน (PDF) เรียบร้อยแล้ว')}
+                onClick={() => alert('ดาวน์โหลดคู่มือบัญชียาโรงพยาบาลวชิระภูเก็ต (PDF) เรียบร้อยแล้ว')}
                 className="px-3.5 py-1.5 bg-emerald-700 text-white font-bold rounded-lg text-xs flex items-center gap-1.5 hover:bg-emerald-800 transition-colors shadow-2xs"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>ดาวน์โหลดบัญชียาหัวหิน (PDF)</span>
+                <span>ดาวน์โหลดบัญชียาโรงพยาบาลวชิระภูเก็ต (PDF)</span>
               </button>
             </div>
           </div>
