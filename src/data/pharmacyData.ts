@@ -229,7 +229,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
     {
   id: 'acad-2',
-    title: 'ประสิทธิภาพการจัดการยาใกล้หมดอายุ_คลังยา_2569',
+    title: 'ประสิทธิภาพการจัดการยาใกล้หมดอายุคลังยา2569',
     authors: 'ภก.ไพรัช สุทธิพัฒนกิจ',
     year: '2569',
     type: 'R2R',
@@ -239,7 +239,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
 
       {
   id: 'acad-3',
-    title: 'Full paperผลของการจัดส่งยาทาง Health Rider และไปรษณีย์ร',
+    title: 'Full paperผลของการจัดส่งยาทาง Health Rider',
     authors: 'วรภา วราธนกุล',
     year: '2569',
     type: 'R2R',
@@ -249,7 +249,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
 
         {
   id: 'acad-1',
-    title: 'Worapa_ผลงานตีพิมพ์_4กพ2568',
+    title: 'Worapa ผลงานตีพิมพ์ 4 กพ 2568',
     authors: 'วรภา วราธนกุล',
     year: '2569',
     type: 'R2R',
@@ -259,7 +259,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
 
     {
     id: 'acad-1',
-    title: 'CQI DOAC smart use--ริน IPD',
+    title: 'CQI DOAC Smart  IPD',
     authors: '-',
     year: '2569',
     type: 'CQI',
@@ -279,7 +279,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
 
       {
     id: 'acad-3',
-    title: 'CQI ห้องยา-- ดูแลด้วยใจ ชะลอความเสื่อมไต ',
+    title: 'CQI ห้องยา ดูแลด้วยใจ ชะลอความเสื่อมไต ',
     authors: 'ภญ.กาญจนา ม่วงทอง',
     year: '2569',
     type: 'CQI',
@@ -297,7 +297,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-5',
-    title: 'CQI คุณพุ่ม 2023 ส่ง HA',
+    title: 'CQI คุณพุ่ม 2023 ',
     authors: 'ภก.นรศักดิ์ วุฒิสันติกุล เภสัชกรปฏิบัติการ',
     year: '2569',
     type: 'CQI',
@@ -306,7 +306,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-6',
-    title: 'กินยาครบ_จบความเสี่ยง',
+    title: 'กินยาครบจบความเสี่ยง',
     authors: 'นางสาวพิชญาภัค เจี๋ยวสกุล',
     year: '2569',
     type: 'CQI',
@@ -315,7 +315,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-7',
-    title: 'ขวดนี้ต้องทบทวน_ผลิต_กญ.สุทธินี',
+    title: 'ขวดนี้ต้องทบทวนผลิต',
     authors: 'ภญ.ศุทธินี ธิ ตันพงศ์เจริญริ',
     year: '2569',
     type: 'CQI',
@@ -324,7 +324,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-8',
-    title: 'ยาแช่เย็น_วีวี_DIS',
+    title: 'ยาแช่เย็น DIS',
     authors: 'เภสัชกร อภิชาติ จิตต์ซื่อ',
     year: '2569',
     type: 'CQI',
@@ -333,7 +333,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-9',
-    title: 'CQI_P07_อุไรพรรณ',
+    title: 'CQI P07',
     authors: '',
     year: '2569',
     type: 'CQI',
@@ -342,7 +342,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-10',
-    title: 'CQI_Oral_R3_08_กญ.จิราภรณ์_สุทธิพัฒนกิจ',
+    title: 'CQI Oral R3 08 ',
     authors: 'กญ.จิราภรณ์ สุทธิพัฒนกิจ',
     year: '2569',
     type: 'CQI',
@@ -359,15 +359,6 @@ export const ACADEMIC_LIST: AcademicItem[] = [
     downloadUrl: 'https://drive.google.com/file/d/13ob8rslzCqHbL2OGeayjD8dvXekx3lN1/view?usp=drive_link'
   },
         {
-    id: 'acad-12',
-    title: 'CQI ห้องยา-- ดูแลด้วยใจ ชะลอความเสื่อมไต ด้วย',
-    authors: 'ภญ.กาญจนา ม่วงทอง',
-    year: '2569',
-    type: 'CQI',
-    abstract: '	พัฒนาระบบการบริบาลทางเภสัชกรรมในผู้ป่วยโรคไตเรื้อรัง ',
-    downloadUrl: 'https://docs.google.com/presentation/d/1uu0y-zh14taPfw34ko9dUJCqgG-h5GB4/edit?usp=drive_link&ouid=109418462991652873807&rtpof=true&sd=true'
-  },
-        {
     id: 'acad-13',
     title: '12_ราชพฤกษ์_Right dose ไร้กังวล',
     authors: '-',
@@ -378,7 +369,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-14',
-    title: 'ปุ๊บปั๊บรับยาเลย--OPD pdf',
+    title: 'ปุ๊บปั๊บรับยาเลย pdf',
     authors: 'นางสาว เสริมสุข สังข์ทอง',
     year: '2569',
     type: 'CQI',
@@ -387,7 +378,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
         {
     id: 'acad-1',
-    title: 'Smart Rx Dash--มูนา คลัง ล่าสุด',
+    title: 'Smart Rx Dash',
     authors: 'ภญ.ณัฐนิช หะยีหมัด',
     year: '2569',
     type: 'Innovation',
@@ -396,7 +387,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
          {
     id: 'acad-2',
-    title: 'IPD Medtrack---นุช IPD',
+    title: 'IPD Medtrack IPD',
     authors: 'นางสาวนิชนิภา ห้าหยัง',
     year: '2569',
     type: 'Innovation',
@@ -405,7 +396,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
          {
     id: 'acad-3',
-    title: 'Smart Drug Stock, Fast Patient Flow--พัช OPD',
+    title: 'Smart Drug Stock, Fast Patient Flow OPD',
     authors: 'นางสาว พัชรีภรณ์ บุษยา',
     year: '2569',
     type: 'Innovation',
@@ -414,7 +405,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
          {
     id: 'acad-4',
-    title: 'ROBOT  MEDICINE--มิว IPD',
+    title: 'ROBOT  MEDICINE IPD',
     authors: '',
     year: '2569',
     type: 'Innovation',
@@ -423,7 +414,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
          {
     id: 'acad-5',
-    title: 'Innovation ห้องยา--รู้ก่อน ยาขาดคลัง',
+    title: 'Innovation ห้องยารู้ก่อน ยาขาดคลัง',
     authors: '',
     year: '2569',
     type: 'Innovation',
@@ -432,7 +423,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
   },
          {
     id: 'acad-6',
-    title: 'Innovation ห้องยา--NO CHALLENGE NO CHANGE',
+    title: 'Innovation ห้องยา NO CHALLENGE NO CHANGE',
     authors: 'ภก.ชาติชาย หวัง',
     year: '2569',
     type: 'Innovation',
@@ -442,7 +433,7 @@ export const ACADEMIC_LIST: AcademicItem[] = [
 
       {
     id: 'acad-6',
-    title: 'E-bidding โปร่งใสได้ยามาตรฐาน--แวว จัดซื้อ',
+    title: 'E-bidding โปร่งใสได้ยามาตรฐาน ',
     authors: 'นางสาวอุไรพรรณ หอประสิทธิ์กุล',
     year: '2569',
     type: 'Publication',
