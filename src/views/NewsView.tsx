@@ -18,7 +18,7 @@ const BANNER_IMAGES = [
   {
     id: 1,
     title: 'โรงพยาบาลวชิระภูเก็ต รับการเยี่ยมสำรวจงานเภสัชกรรมและระบบยา',
-    imageUrl: 'https://pr.moph.go.th/assets/uploads/news/2569/f58e487b02a3abbd2051eff3969b1c8a.jpg',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-t4nfyeNN6CwiquU2avv68TZK2fQEag1kvtX5gaYd_pnxKQ_4TrX0dY&s=10',
   },
   {
     id: 2,
