@@ -37,7 +37,7 @@ const ACTIVITY_GALLERY = [
   {
     id: 'act-1',
     title: 'โรงพยาบาลวชิระภูเก็ต',
-    imageUrl: 'https://thumb.wikimedia.org/wikipedia/th/thumb/1/12/Logo_of_Vachira_Phuket_Hospital.jpg/250px-Logo_of_Vachira_Phuket_Hospital.jpg?utm_source=th.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
+    imageUrl: 'https://pr.moph.go.th/assets/uploads/news/2569/f58e487b02a3abbd2051eff3969b1c8a.jpg',
   },
   {
     id: 'act-2',
@@ -70,7 +70,7 @@ const NEWS_DATA: NewsItemCustom[] = [
     date: '12 ตุลาคม 2569',
     summary: 'นพ.สุรัตน์ ตันติทวีวรกุล ผู้อำนวยการโรงพยาบาลวชิระภูเก็ต เป็นประธานเปิดและกล่าวต้อนรับ ภญ.วิชชุนี พิตรากูล และ ภญ.พาขวัญ ปุณณุปูรต ผู้เยี่ยมสำรวจจากสมาคมเภสัชกรรมโรงพยาบาล (ประเทศไทย) ',
     content: 'นพ.สุรัตน์ ตันติทวีวรกุล ผู้อำนวยการโรงพยาบาลวชิระภูเก็ต เป็นประธานเปิดและกล่าวต้อนรับ ภญ.วิชชุนี พิตรากูล และ ภญ.พาขวัญ ปุณณุปูรต ผู้เยี่ยมสำรวจจากสมาคมเภสัชกรรมโรงพยาบาล (ประเทศไทย) โดยมี ภก.สมนึก ฮาเส็ม หัวหน้ากลุ่มงานเภสัชกรรม กล่าวรายงาน พร้อมด้วยคณะผู้บริหารและบุคลากรโรงพยาบาลร่วมต้อนรับ ณ ห้องประชุมราชพฤกษ์ อาคารบ้านคุณพุ่ม ชั้น 6 การเยี่ยมสำรวจครั้งนี้มีวัตถุประสงค์เพื่อทบทวนและประเมินการดำเนินงานด้านเภสัชกรรมและระบบยา พร้อมรับข้อเสนอแนะในการพัฒนาคุณภาพบริการ เพื่อเตรียมความพร้อมสำหรับการรับรองคุณภาพสถานพยาบาล (Re-accreditation) ครั้งที่ 4 จากสถาบันรับรองคุณภาพสถานพยาบาล (องค์การมหาชน)',
-    imageUrl:'https://scontent.furt1-1.fna.fbcdn.net/v/t39.30808-6/845436947_1452618343636744_4163519010106303949_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1366&ctp=s2048x1366&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=33q5gk0nWjcQ7kNvwEGwldY&_nc_oc=Adp5ddIwmWyskWkfX1FgDha-tOVTzOjVL1ovHJn3jbiuhuF3gu7R_FyKHun957GUWMc&_nc_zt=23&_nc_ht=scontent.furt1-1.fna&_nc_gid=BmXgTfIjDJLTObO4IIXymw&_nc_ss=7a2a8&oh=00_AQMdPYOG41yd-aIOBn899Uy0dtm8voZSez6qWxS_zjE85A&oe=6ADCD547'
+    imageUrl:'https://pr.moph.go.th/assets/uploads/news/2569/f58e487b02a3abbd2051eff3969b1c8a.jpg'
   },
   {
     id: 'journal-2',
