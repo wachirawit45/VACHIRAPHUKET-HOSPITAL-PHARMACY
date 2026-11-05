@@ -43,7 +43,7 @@ export const STRUCTURE_UNITS: StructureUnit[] = [
     '',
   ],
   extension: '1183, 1184',
-  imageUrl: 'https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/855166376_1135853215621803_6758425189385968408_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x1414&ctp=s2000x1414&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mPqcnXKnTccQ7kNvwGyz0YG&_nc_oc=AdqJgkszi4J6aqKwcc3j7LR0AxeQhgO7Qbc0uYyG1QgBIwEVk49_13g1HAbspJGfVyqyGy1PwfzTPb1z3AZUedeE&_nc_zt=23&_nc_ht=scontent.furt2-1.fna&_nc_gid=2czX_mmc9aeqB2IyUkKuaQ&_nc_ss=7b2a8&oh=00_AQPap9G5pnhC4qjbs47GpEsg4BwbwRr-2NQUY4kpqm1uxA&oe=6AE656FD',
+  imageUrl: 'https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/855166376_1135853215621803_6758425189385968408_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x1414&ctp=s2000x1414&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=inONEb7uUlQQ7kNvwHimMj0&_nc_oc=Adq5WlkSlcMUW3GzvZmrpyIpwwplM3ANIATCGVhpmk2k-vFepomoyxSuNm6IIzpWjGNM2eHbFEyTU-iUVX6kziNH&_nc_zt=23&_nc_ht=scontent.furt2-1.fna&_nc_gid=v0hDcij_vpBvajHYAxWMRQ&_nc_ss=7b2a8&oh=00_AQTOFUuSchkhkvDgq8BzzYbhMBmvIY_0ypsZedprslqhtw&oe=6AF2A4FD',
 },
   
 {
